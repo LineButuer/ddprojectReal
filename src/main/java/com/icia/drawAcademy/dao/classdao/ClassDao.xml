@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.icia.drawAcademy.dao.classdao.ClassDao">
+  <insert id="class1proc" parameterType="classDto" >
+		INSERT INTO teacherName1
+		VALUES (null,#{className},#{day},#{date},#{time},#{m_id})
+	</insert>
+  	
+  	
+  	
+  	<select id="classLimit" parameterType="classDto" resultType="Integer">
+  		SELECT COUNT(*) FROM teacherName1 WHERE className = #{className}
+  	</select>
+  	
+  	<select id="checkClass" parameterType="Integer" resultType="classDto" >
+		SELECT * FROM teacherName1 WHERE m_id=#{m_id}
+	</select>
+	
+	</mapper>

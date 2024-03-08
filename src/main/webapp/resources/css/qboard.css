@@ -1,0 +1,494 @@
+html {
+	height: 150%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: linear-gradient(#000000, #111111);
+	overflow: auto; /* 수직 스크롤이 있는 경우 스크롤 생성 */
+}
+
+.bodyMain {
+	position: relative;
+	background-color: #000000;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.headerMenu .Home-btn {
+	position: absolute;
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	width: auto; /* 이미지 크기에 맞게 자동으로 조정됨 */
+	z-index: 9999;
+}
+
+.title {
+	width: 100%; /* 컨테이너의 너비를 화면 전체로 설정 */
+	position: absolute; /* 화면 아래에 고정시킵니다. */
+	text-align: center; /* 내부 텍스트를 가운데 정렬합니다. */
+	padding: 20px; /* 내부 여백 설정 (예시) */
+	box-sizing: border-box; /* 패딩이 포함된 전체 너비/높이 계산 */
+	color: #ffffff;
+	font-size: 50px;
+	font-weight: bold;
+	z-index: 9999;
+}
+
+.headerMenu .logo {
+	width: 120px; /* 이미지가 버튼 내에서 꽉 차도록 설정 */
+	height: auto; /* 이미지의 가로 세로 비율을 유지하면서 버튼에 맞게 조정 */
+}
+
+.facebook {
+	width: 20px;
+	height: 30px;
+	z-index: 9999;
+}
+
+.youtube {
+	width: 30px;
+	height: 20px;
+	z-index: 9999;
+}
+
+.instagram {
+	width: 30px;
+	height: 30px;
+	z-index: 9999;
+}
+
+#menu-container {
+	position: relative;
+	z-index: 9999;
+}
+
+#menuButton {
+	cursor: pointer;
+	position: fixed;
+	top: 25px;
+	right: 30px; /* 오른쪽으로 이동 */
+	display: flex;
+	width: 50px;
+	height: 50px;
+	z-index: 9999;
+}
+
+#icon-container {
+	position: fixed;
+	top: 110px;
+	right: 40px;
+	display: flex;
+	flex-direction: column; /* 세로 방향으로 아이콘을 나열 */
+	align-items: center; /* 아이콘을 수직 중앙으로 정렬 */
+	gap: 15px; /* 아이콘 사이의 간격 설정 */
+	z-index: 9998;
+}
+
+#rectangle {
+	/* 처음엔 숨겨져 있음 */
+	position: absolute;
+	top: 110px; /* toggleButton 바로 아래 위치 */
+	right: 30px; /* menuButton과 같게 */
+	width: 10.5%;
+	min-height: 200px;
+	color: black;
+	background-color: black;
+	display: none;
+	border: 2px solid white;
+	background-color: black;
+	z-index: 9999;
+}
+
+#rectangle button {
+	cursor: pointer;
+	background-color: black;
+	border: none;
+	padding: 0.5em 0.5em; /* 위아래 0.5em, 좌우 1em으로 설정하여 버튼 크기를 내용에 맞게 조정 */
+	color: white;
+	font-size: 23px;
+	gap: 15px;
+}
+
+#rectangle p {
+	color: white;
+	text-align: left;
+	font-size: 24px;
+	text-decoration: underline; /* 밑줄 */
+	margin: 0px;
+}
+
+.smallWord {
+	color: white;
+	margin: 10px;
+}
+
+#icon-container2 {
+	position: relative;
+	right: -30px;
+	display: flex;
+	margin-bottom: 30px;
+	flex-direction: row; /* 가로 방향으로 아이콘을 나열 */
+	align-items: center; /* 아이콘을 수직 중앙으로 정렬 */
+	gap: 15px; /* 아이콘 사이의 간격 설정 */
+	z-index: 9998;
+}
+
+.content-box {
+	width: 100%;
+	position: absolute;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.test1 {
+	padding-top:5%;
+	display: flex;
+	border-bottom: 1px solid #cccccc; /* 리스트 사이의 간격을 조절하기 위한 패딩 추가 */
+}
+
+.test {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.qboard-item {
+	
+	padding-left : 1.75%;
+	border-bottom: 1px solid #cccccc;
+}
+.paging-area {
+    text-align: center; /* 하위 요소를 가로로 가운데 정렬하기 위해 text-align: center; 사용 */
+    overflow: hidden; /* 내부 요소가 부모 컨테이너를 벗어나지 않도록 설정 */
+}
+
+.paging {
+   width: 40%; /* 컨테이너의 너비를 화면 전체로 설정 */
+    display: inline-block;
+  
+   text-align: left; /* 내부 텍스트를 가운데 정렬합니다. */
+   padding: 0px; /* 내부 여백 설정 (예시) */
+   box-sizing: border-box; /* 패딩이 포함된 전체 너비/높이 계산 */
+   color: white;
+    text-decoration: none; /* 밑줄 제거 */
+   font-size: 20px;
+   font-weight: bold;
+   margin: 1%;
+   text-align: left;
+   
+}
+
+
+.pno {
+	display: inline-block;
+   padding : 3%;
+   color: gray;
+   text-decoration: none; /* 밑줄 제거 */
+   
+}
+
+.pno:hover {
+    color: gray; /* 마우스를 올렸을 때 링크의 색상 변경 */
+}
+
+.active {
+   color : white;
+   
+}
+
+#qlist {
+	color: white;
+	text-decoration: none; /* 밑줄 제거 */
+	font-family: Arial, sans-serif; /* 얇은 글꼴 적용 */
+	font-weight: 300;
+}
+
+.wr-btn {
+	position: fixed;
+	bottom: 5%;
+	right: 30px; /* 화면 오른쪽에서 20px 떨어진 위치에 배치합니다. */
+	z-index: 9999; /* 다른 요소 위에 표시될 수 있도록 z-index 값을 지정합니다. */
+	font-size: 20px; /* 버튼의 글꼴 크기를 조정합니다. */
+	border-radius: 3px;
+}
+
+#cklogin {
+	height: 50px;
+	margin-top: 25px; margin-left : auto; /* 오른쪽으로 이동 */
+	border: none;
+	font-weight: bold;
+	font-size: 20px;
+	margin-left: auto;
+}
+
+.header-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f0f0f0;
+	
+}
+
+.middle-box {
+	width: 70%;
+	height: 100%; position : absolute;
+	top: 32.7%;
+	position: absolute;
+	left: 14.3%;
+}
+
+
+/** 하민 작업 **/
+.frequent-title {
+	width: 100%;
+	position: absolute;
+	box-sizing: border-box;
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	margin-top:-7%;
+}
+
+.frequent-title, form {
+	margin-left: auto; /* 나머지 공간을 오른쪽으로 이동 */
+	display: flex; /* flexbox 레이아웃 적용 */
+	align-items: center; /* 수직 중앙 정렬 */
+	font-weight: bold;
+}
+
+input[type="text"] {
+	padding: 8px;
+	margin-right: 8px; /* 인풋과 버튼 사이 여백 조절 */
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.frequent-question {
+	top: 40%;
+	left: 50%;
+	box-sizing: border-box;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 auto;
+	border: 1px solid;
+	padding-left: 5%;
+	padding-top: 3%;
+	padding-bottom: 0%;
+	
+}
+
+
+.faqCard {
+	height: 80px;
+	overflow: hidden;
+}
+
+.question {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.downButton {
+	margin-left: auto;
+	padding-right:3.75%; /* 오른쪽으로 이동 */
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.answer {
+	margin-top: 10px;
+	display: none; /* 초기에는 숨김 */
+	box-sizing: border-box;
+}
+
+.search {
+	box-sizing: border-box;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.search-item {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 1.75%;
+	border-bottom: 1px solid #cccccc;
+	
+}
+
+.search-item a {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	
+}
+
+.searchList {
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
+	padding-top :5%;
+	margin-left: 0px;
+}
+.searchList1{
+	padding-top:5%;
+	border-bottom: 1px solid #cccccc;
+}
+
+.searchB {
+	cursor: pointer;
+	position: relative;
+	display: inline-flex;
+	padding: 10px 20px;
+	color: #ffffff;
+	font-size: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: .5s;
+	letter-spacing: 4px;
+	border: none;
+	background-color: transparent;
+	z-index: 9999;
+}
+
+/* 버튼에 마우스를 올렸을 때 스타일 변경 */
+.searchB:hover {
+	background: #ffffff;
+	color: #000000;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0
+		100px #ffffff;
+}
+
+.searchB span {
+	position: absolute;
+	display: block;
+}
+
+.
+.searchB span:nth-child(1) {
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, #ffffff);
+	animation: btn-anim1 1s linear infinite;
+}
+
+@
+keyframes btn-anim1 { 0% {
+	left: -100%;
+}
+
+50
+%
+,
+100
+%
+{
+left
+:
+100%;
+}
+}
+.searchB span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #ffffff);
+	animation: btn-anim2 1s linear infinite;
+	animation-delay: .25s
+}
+
+@
+keyframes btn-anim2 { 0% {
+	top: -100%;
+}
+
+50
+%
+,
+100
+%
+{
+top
+:
+100%;
+}
+}
+.searchB span:nth-child(3) {
+	bottom: 0;
+	right: -100%;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, transparent, #ffffff);
+	animation: btn-anim3 1s linear infinite;
+	animation-delay: .5s
+}
+
+@
+keyframes btn-anim3 { 0% {
+	right: -100%;
+}
+
+50
+%
+,
+100
+%
+{
+right
+:
+100%;
+}
+}
+.searchB span:nth-child(4) {
+	bottom: -100%;
+	left: 0;
+	width: 2px;
+	height: 100%;
+	background: linear-gradient(360deg, transparent, #ffffff);
+	animation: btn-anim4 1s linear infinite;
+	animation-delay: .75s
+}
+
+@
+keyframes btn-anim4 { 0% {
+	bottom: -100%;
+}
+50
+%
+,
+100
+%
+{
+bottom
+:
+100%;
+}
+

@@ -1,0 +1,308 @@
+html {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   font-family: sans-serif;
+   background: linear-gradient(#000000, #111111);
+   overflow: auto; /* 수직 스크롤이 있는 경우 스크롤 생성 */
+}
+
+.bodyMain {
+   position: absolute;
+   background-color: #000000;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.headerMenu .Home-btn {
+   position: absolute;
+   background: none;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+   width: auto; /* 이미지 크기에 맞게 자동으로 조정됨 */
+   z-index: 9999;
+}
+
+.title {
+   width: 100%; /* 컨테이너의 너비를 화면 전체로 설정 */
+   position: fixed; /* 화면 아래에 고정시킵니다. */
+   text-align: center; /* 내부 텍스트를 가운데 정렬합니다. */
+   padding: 20px; /* 내부 여백 설정 (예시) */
+   box-sizing: border-box; /* 패딩이 포함된 전체 너비/높이 계산 */
+   color: #ffffff;
+   font-size: 50px;
+   font-weight: bold;
+   z-index: 9999;
+}
+
+.headerMenu .logo {
+   width: 120px; /* 이미지가 버튼 내에서 꽉 차도록 설정 */
+   height: auto; /* 이미지의 가로 세로 비율을 유지하면서 버튼에 맞게 조정 */
+}
+
+.facebook {
+   width: 20px;
+   height: 30px;
+   z-index: 9999;
+}
+
+.youtube {
+   width: 30px;
+   height: 20px;
+   z-index: 9999;
+}
+
+.instagram {
+   width: 30px;
+   height: 30px;
+   z-index: 9999;
+}
+
+#menu-container {
+   position: relative;
+   z-index: 9999;
+}
+
+#menuButton {
+   cursor: pointer;
+   position: absolute;
+   top: 25px;
+   right: 30px; /* 오른쪽으로 이동 */
+   display: flex;
+   width: 50px;
+   height: 50px;
+   z-index: 9999;
+}
+
+#icon-container {
+   position: absolute;
+   top: 110px;
+   right: 40px;
+   display: flex;
+   flex-direction: column; /* 세로 방향으로 아이콘을 나열 */
+   align-items: center; /* 아이콘을 수직 중앙으로 정렬 */
+   gap: 15px; /* 아이콘 사이의 간격 설정 */
+   z-index: 9998;
+}
+
+#rectangle {
+   /* 처음엔 숨겨져 있음 */
+   position: absolute;
+   top: 110px; /* toggleButton 바로 아래 위치 */
+   right: 30px; /* menuButton과 같게 */
+   width: 10.5%;
+   min-height: 200px;
+   color: black;
+   background-color: black;
+   display: none;
+   border: 2px solid white;
+   background-color: black;
+   z-index: 9999;
+}
+
+#rectangle button {
+   cursor: pointer;
+   background-color: black;
+   border: none;
+   padding: 0.5em 0.5em; /* 위아래 0.5em, 좌우 1em으로 설정하여 버튼 크기를 내용에 맞게 조정 */
+   color: white;
+   font-size: 23px;
+   gap: 15px;
+}
+
+#rectangle p {
+   color: white;
+   text-align: left;
+   font-size: 24px;
+   text-decoration: underline; /* 밑줄 */
+   margin: 0px;
+}
+
+.smallWord {
+   color: white;
+   margin: 10px;
+}
+
+#icon-container2 {
+   position: relative;
+   right: -30px;
+   display: flex;
+   margin-bottom: 30px;
+   flex-direction: row; /* 가로 방향으로 아이콘을 나열 */
+   align-items: center; /* 아이콘을 수직 중앙으로 정렬 */
+   gap: 15px; /* 아이콘 사이의 간격 설정 */
+   z-index: 9998;
+}
+
+.middle-part {
+   width: 50%;
+   position: fixed;
+   margin: 0 auto;
+   top: 55%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 20px;
+   box-sizing: border-box;
+   color: #ffffff;
+   font-size: 20px;
+   font-weight: bold;
+   margin: 0 auto;
+}
+
+.write {
+   position: absolute;
+   left: 51%;
+   top: 55%;
+   width: 900px;
+   transform: translate(-50%, -50%);
+}
+
+.write input[type="text"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 10px;
+   background-color : black;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+   color:white;
+   font-size: 16px;
+}
+
+.write textarea {
+   width: 100%;
+   padding: 10px;
+   background-color : black;
+   margin-bottom: 10px;
+   border: 2px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+   font-size: 16px;
+   color:white;
+   height: 475px;
+}
+
+/* 버튼 스타일링 */
+.write .submit-btn {
+   cursor: pointer;
+    position: relative;
+   display: inline-block;
+   padding: 10px 20px;
+   color: #ffffff;
+   font-size: 16px;
+   text-decoration: none;
+   text-transform: uppercase;
+   overflow: hidden;
+   transition: .5s;
+   letter-spacing: 4px;
+   border: none;
+   background-color: transparent;
+   z-index: 9999;
+   margin-left:45%;
+   margin-top:5%;
+}
+
+/* 버튼에 마우스를 올렸을 때 스타일 변경 */
+.write .submit-btn:hover {
+   background: #ffffff;
+   color: #000000;
+   border-radius: 5px;
+   box-shadow: 0 0 5px #ffffff, 0 0 25px #ffffff, 0 0 50px #ffffff, 0 0
+      100px #ffffff;
+}
+
+.write .submit-btn span {
+   position: absolute;
+   display: block;
+}
+
+.write .submit-btn span:nth-child(1) {
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, #ffffff);
+   animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+  50%,100% {
+    left: 100%;
+  }
+}
+.write .submit-btn span:nth-child(2) {
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, #ffffff);
+   animation: btn-anim2 1s linear infinite;
+   animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+  0% {
+    top: -100%;
+  }
+  50%,100% {
+    top: 100%;
+  }
+}
+.write .submit-btn span:nth-child(3) {
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, #ffffff);
+   animation: btn-anim3 1s linear infinite;
+   animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+  0% {
+    right: -100%;
+  }
+  50%,100% {
+    right: 100%;
+  }
+}
+.write .submit-btn span:nth-child(4) {
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, #ffffff);
+   animation: btn-anim4 1s linear infinite;
+   animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+  0% {
+    bottom: -100%;
+  }
+  50%,100% {
+    bottom: 100%;
+  }
+  
+
+.btn-con {
+
+   position: fixed;
+   bottom: 0;
+   padding: 20px;
+   display: flex;
+   justify-content: space-around;
+   flex-direction: row;
+   box-sizing: border-box;
+}
